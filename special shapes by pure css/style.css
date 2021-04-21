@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 200px;
+}
+
+div {
+    margin: 100px 0;
+}
+
+.circle { 
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.semi-circle {
+    height: 100px;
+    width: 200px;
+    border-radius: 100px 100px 0 0;
+    background-color: black;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 200px solid black;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+.trapezium {
+    width: 100px;
+    height: 0;
+    border-bottom: 100px solid black;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+.parallelogram {
+    height: 120px;
+    width: 200px;
+    background: black;
+    transform: skew(20deg);
+}
+
+.hexagon {
+    position: relative;;
+    width: 100px;
+    height: 0;
+    border-top: 120px solid black;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+.hexagon::before {
+    content: "";
+    position: absolute;
+    top: -240px;
+    left: -100px;
+    width: 100px;
+    height: 0;
+    border-bottom: 120px solid black;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+.drop {
+    height: 200px;
+    width: 200px;
+    background: black;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+}
+
+.diamond {
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    border-width: 0 25px 25px 25px;
+    height: 0;
+    width: 50px;
+    position: relative;
+}
+
+.diamond::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    border-width: 70px 50px 0 50px;
+}
+
+.cross {
+    background: black;
+    height: 100px;
+    position: relative;
+    width: 20px;
+    transform: rotate(45deg);
+}
+
+.cross::after {
+    background: black;
+    content: "";
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    left: -40px;
+    top: 40px;
+}
