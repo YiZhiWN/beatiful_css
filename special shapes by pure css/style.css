@@ -113,3 +113,109 @@ div {
     left: -40px;
     top: 40px;
 }
+
+.egg {
+    width: 100px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.star {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 160px solid black;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+}
+
+.star::after {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: 50px;
+    height: 0;
+    width: 0;
+    border-top: 160px solid black;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+.moon {
+    width: 120px;
+    height: 120px;
+    /* background-color: red; */
+    border-radius: 50%;
+    box-shadow: 22px 22px 0 0 black;
+}
+
+.coffee {
+    position: relative;
+    background: black;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px 20px 200px 200px;
+}
+
+.coffee::before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 100px;
+    border-radius: 50%;
+    background: black;
+    z-index: -1;
+    bottom: -6px;
+}
+
+.coffee::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: gray;
+    left: 30px;
+    top: -24px;
+    filter: blur(4px);
+    box-shadow: 0px -20px 4px -1px gray, -20px -24px 4px gray, 22px -4px 4px -2px gray, 20px -34px 4px -2px gray;
+}
+
+.stand {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 4px solid black;
+    border-radius: 50% 10px 20px 50%;
+    right: -10px;
+    top: -88px;
+}
+
+.infinity {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+}
+
+.infinity::before {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border: 20px solid black;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(45deg);
+}
+
+.infinity::after {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border: 20px solid black;
+    border-radius: 50% 0% 50% 50%;
+    transform: rotate(45deg);
+    left: -200px;
+}
