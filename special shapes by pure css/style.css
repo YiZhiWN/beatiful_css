@@ -219,3 +219,32 @@ div {
     transform: rotate(45deg);
     left: -200px;
 }
+
+.arrow {
+    height: 40px;
+    width: 100px;
+    background: black;
+    position: relative;
+}
+
+.arrow::before {
+    content: "";
+    position: absolute;
+    border-top: 60px solid black;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    transform: rotate(-90deg);
+    right: -60px;
+    top: -10px;
+}
+
+.pacman {
+    margin-left: 100px;
+    width: 0;
+    height: 0;
+    border-right: 60px solid transparent;
+    border-top: 60px solid black;
+    border-left: 60px solid black;
+    border-bottom: 60px solid black;
+    border-radius: 50%;
+}
